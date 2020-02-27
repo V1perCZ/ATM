@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/materialize.min.css">
+    <link rel="stylesheet" href="assets/css/bank.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.0.5/howler.core.min.js"></script>
+  </head>
+  <body>
+    <div id="paper">
+      <div id="header">
+        <h1>Vklad / vyber / prevod</h1>
+        <img src="assets/images/fleeca.png" draggable="false"/>
+      </div>
+      <div id="content">
+        <div id="home">
+          <p id="welcome">Vitejte ve Fleeca bance</p>
+          <p>Klikni dole na tlacitko pro urceni moznosti<br /> Pro dokonceni transakce, kliknete na tlacitko.</p>
+        </div>
+        <form id="transaction-form">
+          <h2>Vase udaje</h2>
+          <div class="input-field small">
+            <p class="label">Jmeno</p>
+            <input class="firstname" disabled/>
+          </div>
+          <div class="input-field small">
+            <p class="label">Prijmeni</p>
+            <input class="lastname" disabled/>
+          </div>
+          <div class="input-field">
+            <p class="label">Cislo uctu</p>
+            <input id="senderAcc" disabled/>
+          </div>
+          <div class="input-field">
+            <p class="label">Pobocka</p>
+            <input disabled/>
+          </div>
+          <h2>Udaje komu chcete poslat penize</h2>
+          <div class="input-field">
+            <p class="label">Cislo uctu</p>
+            <input id="receiverAcc" value="" required/>
+          </div>
+          <div class="input-field">
+            <p class="label">Pobocka</p>
+            <input id="orgnumb" value=""/>
+          </div>
+          <hr />
+          <div class="input-field">
+            <p class="label">Pocet</p>
+            <input id="transfer-amount" pattern="[0-9]" required/>
+          </div>
+          <p class="saldo">Penize: </p>
+        </form>
+        <form id="take-form">
+          <h2>Vyber / vklad</h2>
+          <div class="input-field small">
+            <p class="label">Jmeno</p>
+            <input class="firstname" disabled/>
+          </div>
+          <div class="input-field small">
+            <p class="label">Prijmeni</p>
+            <input class="lastname" disabled/>
+          </div>
+          <div class="input-field">
+            <p class="label">Cislo uctu</p>
+            <input value="" disabled id="takeAcc"/>
+          </div>
+          <div class="input-field">
+            <p class="label">Pobocka</p>
+            <input value="223456-0231" disabled/>
+          </div>
+          <hr />
+          <div class="input-field">
+            <p class="label">Pocet</p>
+            <input id="take-amount" pattern="[0-9]{3}" required/>
+          </div>
+          <p class="saldo">Penize: </p>
+        </form>
+        <div id="footer">
+          <button class="btn-flat waves-effect" id="deposit">Vklad</button>
+          <button class="btn-flat waves-effect" id="withdraw">Vyber</button>
+          <button class="btn-flat waves-effect" id="transfer">Prevod</button>
+        </div>
+      </div>
+    </div>
+    <script src="assets/js/jquery.js" type="text/javascript"></script>
+    <script src="assets/js/materialize.js" type="text/javascript"></script>
+    <script src="assets/js/init.js" type="text/javascript"></script>
+    <script src="assets/js/bank.js" type="text/javascript"></script>
+  </body>
+</html>
